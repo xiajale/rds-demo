@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    multi:
+      sale:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/saledb?useUnicode=true&characterEncoding=utf-8&useSSL=false
+        username: root
+        password: 936502
+      produce:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/producedb?useUnicode=true&characterEncoding=utf-8&useSSL=false
+        username: root
+        password: 936502
+    dynamic:
+      master:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/masterdb?useUnicode=true&characterEncoding=utf-8&useSSL=false
+        username: root
+        password: 936502
+      slave:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/slavedb?useUnicode=true&characterEncoding=utf-8&useSSL=false
+        username: root
+        password: 936502

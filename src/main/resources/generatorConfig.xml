@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="/Users/zhouyibin/.m2/repository/mysql/mysql-connector-java/5.1.44/mysql-connector-java-5.1.44.jar" />
+
+    <context id="saledbMysqlContext" targetRuntime="MyBatis3" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/saledb"
+                        userId="root"
+                        password="936502">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.huawei.com.rdsdemo.model" targetProject="src/main/java">
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <table tableName="tb_order" domainObjectName="Order">
+        </table>
+    </context>
+
+    <context id="producedbMysqlContext" targetRuntime="MyBatis3" defaultModelType="flat">
+            <property name="beginningDelimiter" value="`"/>
+            <property name="endingDelimiter" value="`"/>
+
+            <commentGenerator>
+                <property name="suppressAllComments" value="true"/>
+                <property name="suppressDate" value="true"/>
+            </commentGenerator>
+
+            <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                            connectionURL="jdbc:mysql://localhost:3306/producedb"
+                            userId="root"
+                            password="936502">
+            </jdbcConnection>
+
+            <javaModelGenerator targetPackage="com.huawei.com.rdsdemo.model" targetProject="src/main/java">
+                <property name="trimStrings" value="true" />
+            </javaModelGenerator>
+
+            <table tableName="tb_good" domainObjectName="Good">
+            </table>
+    </context>
+
+    <context id="masterdbMysqlContext" targetRuntime="MyBatis3" defaultModelType="flat">
+                <property name="beginningDelimiter" value="`"/>
+                <property name="endingDelimiter" value="`"/>
+
+                <commentGenerator>
+                    <property name="suppressAllComments" value="true"/>
+                    <property name="suppressDate" value="true"/>
+                </commentGenerator>
+
+                <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                                connectionURL="jdbc:mysql://localhost:3306/masterdb"
+                                userId="root"
+                                password="936502">
+                </jdbcConnection>
+
+                <javaModelGenerator targetPackage="com.huawei.com.rdsdemo.model" targetProject="src/main/java">
+                    <property name="trimStrings" value="true" />
+                </javaModelGenerator>
+
+                <table tableName="tb_seller" domainObjectName="Seller">
+                </table>
+                <table tableName="tb_purchaser" domainObjectName="Purchaser">
+                </table>
+    </context>
+
+</generatorConfiguration>
